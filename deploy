@@ -1,0 +1,21 @@
+#near dev-deploy --wasmFile target/wasm32-unknown-unknown/release/ballot.wasm --helperUrl https://near-contract-helper.onrender.com
+
+#near dev-deploy --wasmFile res/ballot.wasm --helperUrl https://near-contract-helper.onrender.com
+
+#near dev-deploy wbtc --wasmFile res/ft.wasm --initFunction new --initArgs '{
+#  "owner_id": '$CONTRACT_NAME',
+#  "total_supply": '$TOTAL_SUPPLY',
+#  "metadata": {
+#     "spec": "ft-1.0.0",
+#     "name": '$TOKEN_NAME',
+#     "symbol": '$TOKEN_SYMBOL',
+#     "icon": "data:image/svg+xml,%3C…",
+#     "reference": "https://example.com/wbtc.json",
+#     "reference_hash": "AK3YRHqKhCJNmKfV6SrutnlWW/icN5J8NUPtKsNXR1M=",
+#     "decimals": 8
+#  }
+#}' --accountId alice
+
+
+near dev-deploy  --wasmFile res/cmn-token.wasm
+source neardev/dev-account.env

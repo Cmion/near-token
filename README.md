@@ -1,0 +1,1 @@
+# NEAR NEP141 Fungible Token Contract
